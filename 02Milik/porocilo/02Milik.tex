@@ -1,0 +1,133 @@
+\documentclass[12pt]{report}
+
+\usepackage[a4paper]{geometry}
+%\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm, a4paper}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{caption}
+\graphicspath{}
+\usepackage[document]{ragged2e}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage[slovene]{babel}
+\usepackage{textcomp, gensymb}
+\usepackage{siunitx}
+\usepackage{pdfrender,xcolor}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{float}
+\usepackage{titlesec}
+
+\newfloat{slika}{htbp}{loc}
+\floatname{slika}{Slika}
+
+\newfloat{tabela}{htbp}{loc}
+\floatname{tabela}{Tabela}
+
+% Differential
+\newcommand{\diff}{\mathrm{d}}
+
+\title{
+  \includegraphics[width=0.4\textwidth]{fmf_logo}\\
+  {\small Oddelek za fiziko} \\
+  {Določitev osnovnega naboja po Millikanu}\\
+  {\small Poročilo pri fizikalnem praktikumu IV}\\
+
+}
+\date{}
+\author{ Kristofer Č. Povšič \\[5 cm]
+ \small Asistent: Jelena Vesić
+}
+
+
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter{. }}{0pt}{\Huge\bfseries}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\setcounter{page}{2}
+
+\maketitle
+
+\chapter*{Uvod}
+
+Z Millikanovim poskusom opazujemo gibanje naelektrenih kapljic v gravitacijskem in električnem polju. Zaradi relativne enostavnosti je poskus dostopen tudi nam, študentom. 
+
+Poskus izvedemo na dva načina. Ko je vsota sil na kapljico 0 in se premika s konstantno hitrostjo, nanjo delujejo 3 sile; sila teže $mg = \frac{4\pi}{3} r^3 g$, sila vzgona $\frac{4\pi}{3} r^3 \rho_{zr} g$ in Stokesova sila $6\pi r \eta v$, kjer je $\rho_{zr}$ gostota zraka, $\eta$ viskoznostni koeficient, ki je za zrak pri $23 ^\circ C$ enak $18.3 \mu Pas$. Iz teh treh sil lahko izračunamo radij kapljice
+
+\begin{equation}
+  r^2 = \frac{9\eta v}{2 (\rho - \rho_{zr})g}
+\end{equation}
+
+Ko je kapljica naelektrena in nosi mnogokratni osnovnega naboja $ne_0$, deluje nanjo v električnem polju ploščatega kondenzatorja z električno jakostjo $E$ dodatna sila $ne_0 E$. Dosežemo lahko, da kapljica miruje tako, da spremenimo velikost in smer električnega polja. Takrat velja sledeča enačba
+
+\begin{equation}
+  \frac{4\pi}{3} r^3 (\rho - \rho_{zr}) g = ne_0 E 
+\end{equation}
+
+kjer je $U = dE$ napetost na kondenzatorju in d je razdalja med ploščama kondenzatorja. Z meritvijo hitrosti pri prostem padanju skozi zrak in napetost, pri kateri se kapljica ustavi, lahko določimo mnogokratnik osnovnega naboja. 
+
+Drugi način pa je, da majhno kapljico premikano z napetostjo $U=dE$ v pozitivni in negativni smeri težnostnega pospeška. Ko se hitrosti ustali velja enakost sil: 
+
+\begin{equation}
+  \frac{4\pi}{3} r^3 (\rho - \rho_{zr}) g \pm |n|e_0 E = \pm 6\pi r \eta v_{\pm}
+\end{equation}
+
+Hitrosti $v_+$ in $v_-$ sta hitrosti premikanja v pozitivni in negativni smeri težnostnega pospeška in ju lahko izmerimo. Na njihovi podlagi določimo radij kapljice 
+
+\begin{equation}
+  r^2 = \frac{9\eta (v_+ - v_-)}{4g(\rho - \rho_{zr})}
+\end{equation}
+
+in absolutno vrednost večkratnika naboja $n$: 
+
+\begin{equation}
+  |n|e_0 = \frac{3\phi r \eta}{E}(v_+ + v_-)
+\end{equation}
+  
+\chapter*{Naloga}
+
+\begin{itemize}
+  \item Izmeri hitrosti gibanja kapljic v gravitacijskem in električnem polju. 
+  \item Iz meritev izračunaj velikosti kapljic in njihov naboj ter določi osnovni naboj. 
+\end{itemize}
+
+
+\begingroup
+\let\clearpage\relax
+
+\chapter*{Potrebščine}
+\begin{itemize}
+  \item Millikanov aparat: kondenzator z razmikom $d = 5(1 \pm 0.02)$ mm, razpršilec z oljem ($\rho = 0.973g cm^{-3}$), LED za osvetljevanje 
+  \item mikroskop s kamero, ki je priključena na računalnik 
+  \item usmernik za 300V
+  \item preklopnik smeri napetosti 
+  \item voltmeter
+\end{itemize}
+
+\chapter*{Navodilo}
+
+Vklopim računalnik in napajalec za belo LEDico, ki osvetljuje notranjost kondenzatorja. Oljne kapljice s stiskom gumijastega balona razpršilca vbrizga, skozi luknjico na zgornji plošči kondenzatorja, ki jih na temnem zaslonu opazim kot svetle točke. Nabite kapljice lahko spuščam gor ali dol s spreminjanjem napetosti preko usmernika za 300V. Posnamem zaslon po prvem in drugem načinu to analiziram preko programa, ki mi potem izračuna hitrost izbrane kapljice, kar si zapišem. 
+
+\endgroup
+
+
+\chapter*{Obdelava podatkov}
+
+Za račun potrebujem tudi gostoto olja, zraka ter njegovo viskoznost: 
+\begin{align*}
+  \rho &= (973 \pm 1)\,\si{kg/m^3}, \\
+  \rho_{zr} &= (120 \pm 5)\,\si{kg/m^3}, \\
+  \eta_{zr} &= (18.3 \pm 0.1)\,\si{\mu Pas}
+\end{align*}
+
+
+
+
+
+\end{document}
