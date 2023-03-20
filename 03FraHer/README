@@ -1,0 +1,27 @@
+.csv datoteke naj bodo v mapi meritve oblike: 
+prva vrstica: minimum (0, minimum manjše napetosti)
+druga vrstica dalje: vrednosti vrhov (večja napetost; manjša napetost)
+
+Primer: 
+
+'U1'; 'U2' %ničta vrstica 
+0; -6.24e-3 %minimum
+-15.6; 6.24e-3 %vrednosti vrhov, večja napetost; manjša napetost (e-3 == 10^{-3} == mili)
+-10.4; 2.496e-3
+-5.2; 0.416e-3
+0; -2.912e-3
+
+za odčitanje vrednosti glej priloženo sliko PrimerMeritve
+
+
+Ko pride do vstavljanja arrayjev v LaTeX file, glej moje poročilo, kako je narejeno oz.:
+
+\begin{tabular}
+    \centering
+    \[ %začetek math environmenta
+        \begin{array}{št. vrstic} \hline
+            vrstica \\ % ! dodati moraš na koncu vsake vrstice \hline, če želiš imeti vodoravno črt
+            zadnja vrstica \\ % ! nujno moraš dodati "\\" drugače ti javi error
+        \end{array}
+    \]
+\end{tabular}

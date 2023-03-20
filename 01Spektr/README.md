@@ -1,0 +1,1 @@
+Poskrbi, da sta obdelava.ipynb in sRGB-approx.png v istem folderju, preden poženeš skripto. 
