@@ -34,14 +34,13 @@
 \title{
   \includegraphics[width=0.4\textwidth]{fmf_logo}\\
   {\small Oddelek za fiziko} \\
-  {Naslov}\\
-  {\small Podnaslov}\\
+  {Sklopljena nihajna kroga}\\
+  {\small Poročilo pri fizikalnem praktikumu IV}\\
 
 }
 \date{}
-\author{ avtor \\[5 cm]
- \small  Predavatelj:\\
- \small  Asistenta:  \\
+\author{ Kristofer Č. Povšič \\[5 cm]
+ \small  Asistentka: Jelena Vesić
 }
 
 
@@ -57,7 +56,34 @@
 
 \chapter*{Uvod}
 
+Pri sklopitvi povzročimo, da posameznih oscilatorjev več ne obravnavamo ločeno, ampak kot en sistem. Sistem sestavljen iz $n$ enakih oscilatorjev, ima $n$ lastnih nihanj, ki jih opišemo z lastnimi frekvencami $\omega_n$ in lastnimi vektorji. 
+
+Ko povežemo dva identična nihajna kroga s kondenzatorjem $C_0$, je en način nihanja, da nihata v fazi in vmesnega sklopitvenega kondenzatorja ne zaznata. Drugi način pa je, da nihata v nasprotni fazi. 
+
+Rešitev diferencialne enačbe za zgolj kapacitivno sklopljena kroga nam za začetni pogoj, kjer drugi krog miruje in začnemu vzbujati prvi krog, napove odvisnost napetosti oblike
+
+\[
+  \begin{align*}
+    U_1 = U_0 e^{-\beta t}\cos(\omega t) \cos (\Delta \omega t)
+    U_2 = U_0 e^{-\beta t} \cos(\omega t) \sin (\Delta \omega t)
+  \end{align*}
+\]
+
+Naša eksperimentalna postavitev pa ni ravno tako idealna - predvsem je problem induktivna sklopitev, ki pri manjših vrednostih nastavljivega kondenzatorja igra precej veliko vlogo, a smo jo tu ignorirali. Ko merimo resonančno krivuljo, vidio, da je resonačni vrh položnejši, čim večje je dušenje $\beta$. Pogosto namesto parametra $\beta$ navajamo doboroto oz. kvaliteto nihajnega kroga 
+
+\begin{equation}
+  Q = \frac{\omega_1}{\Delta \omega} = \frac{omega}{2 \beta} = \sqrt{\frac{L}{CR^2}}
+\end{equation}
+
+pri čemer je $\omega_1$ resonančna frekvenca, $\Delta \omega$ širina resonančne krivulje pri $\frac{1}{\sqrt{2}}$ maksimuma. 
+
 \chapter*{Naloga}
+
+\begin{itemize}
+  \item Izmerite časovni potek napetosti na obeh krogih pri vzbujanju s stopničastim signalom za vse različne sklopitve $C_0 = 0,\, 150,\, 330,\, 560,\, 820,\, 1150 \si{pF}$. 
+  \item Izmerite frekvenčno karakteristiko enega nihajnega kroga in določite dobroto $Q$. 
+  \item Izmerite frekvenčno karakteristiko sklopljenih nihajnih krogov z meritvijo odziva drugega kroga za vsak $C_0$ in izmerite razliko lastnih krožnih frekvenc $\Delta \omega$. 
+\end{itemize}
 
 
 \begingroup
@@ -65,22 +91,27 @@
 
 \chapter*{Potrebščine}
 \begin{itemize}
-\item 
+  \item digiatlni osciloskop
+  \item funkcijski generator napetosti, namizni multimeter
+  \item nihajna kroga in kabli, USB ključek
+  \item prenosnik s programom \verb+SkNikKr+ napisan v LabView
 \end{itemize}
 
 \chapter*{Navodilo}
+
+\begin{enumerate}
+  \item Odziv obeh nihajnih krogov na napetostno stopnico: Povežem stvari kot je v navodilih in potem spreminjam sklopitveni kondenzator in opazujem signale v obeh krogih. 
+  \item Vsiljeno nihanje enega nihajnega kroga: Sklopitveni kondenzator $C_0$ naj bo izklopljen, torej $C_0 = 0$ in kratko sklenimo drugi nihajni krog, tako da povežemo izhod $U_2$ in zemljo. Nato odstrani še kratko sklenitev kroga. 
+  \item Vsiljeno nihanje sklopljenih krogov: Pri vklopljenem sklopitvenem kondenzatorju lahko opazimo resonančno obnašanje na obeh krogih, vendar je na drugem krogu bolj izrazito. S programom izmerite frekvenčno odvisnost od efektivne napetosti na drugem krogu v istem frekvenčnem intervalu kot pri 1. nalogi. 
 
 \endgroup
 
 
 \chapter*{Obdelava podatkov}
 
+\section*{1. del}
 
 
-\chapter*{Izračunane vrednosti}
-
-
-\chapter*{Komentar}
 
 
 
