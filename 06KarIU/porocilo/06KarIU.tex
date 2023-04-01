@@ -76,6 +76,8 @@ Pri vaji se spoznamo z uporabo funkcijskega generatorja in osciloskopa ter odziv
   \item USB ključek
 \end{itemize}
 
+\endgroup
+
 \chapter*{Obdelava podatkov}
 
 \section*{Upornik}
@@ -84,12 +86,12 @@ Ima linearno karakteristiko v širokem razponu frekvenc. Tok in napetost sta v f
 
 \begin{slika}[H]
   \centering
-  \includegraphics{upornik}
+  \includegraphics[width=0.5\textwidth]{upornik}
   \caption{\small Skica karakteristike upornika pri $\nu = 50\si{Hz}$}
 \end{slika}
 
 \[
-  R = \frac{\Delta y}{\Delta x R_{not}} = \frac{3.7\si{V}}{3.75\si{V} \cdot 1k\omega} = (1010 \pm 30) \Omega
+  R = \frac{\Delta y}{\Delta x R_{not}} = \frac{3.7\si{V}}{3.75\si{V} \cdot 1k\Omega} = (1010 \pm 30) \Omega
 \]
 
 \section*{Kondenzator}
@@ -98,14 +100,14 @@ Preverite frekvenčni razpon, v katerem sta fazi toka in napetosti premaknjeni z
 
 \begin{slika}[H]
   \centering
-  \includegraphics{kondenzator}
+  \includegraphics[width=0.5\textwidth]{kondenzator}
   \caption{\small Skica karakteristike kondenzatorja pri $\nu = 50\si{Hz}$}
 \end{slika}
 
 Pri faznem zamiku $\frac{\pi}{2}$ velja: 
 
 \[
- C = \frac{\Delta y}{\Delta x R_{not} \omega} = \frac{1.25\si{V}}{3.5\si{V}\cdot 2\pi \cdot 50\si{Hz} \cdot 1k\omega} = (1.14 \pm 0.04)\mu \si{F}
+ C = \frac{\Delta y}{\Delta x R_{not} \omega} = \frac{1.25\si{V}}{3.5\si{V}\cdot 2\pi \cdot 50\si{Hz} \cdot 1k\Omega} = (1.14 \pm 0.04)\mu \si{F}
 \]
 
 \section*{Tuljava z jedrom}
@@ -115,12 +117,12 @@ Tuljava z jedrom je eden manj idealnih elementov, ker vsebuje dolge žice, ki pr
 Pri faznem zamiku $\frac{\pi}{2}$
 
 \[
-  L = \frac{Z_L}{\omega} = \frac{\Delta x R}{\omega \Delta y} = \frac{3.8\si{V} \cdot 1k\Omega}{0.38\si{V} \cdot 2\pi \cdot 10^4\si{Hz}} = (160 \pm 5) mH 
+  L = \frac{Z_L}{\omega} = \frac{\Delta x R}{\omega \Delta y} = \frac{3.8\si{V} \cdot 1k\Omega}{0.38\si{V} \cdot 2\pi \cdot 10^4\si{Hz}} = (160 \pm 5) \si{mH}
 \]
 
 \begin{slika}[H]
   \centering
-  \includegraphics{tuljava}
+  \includegraphics[width=0.5\textwidth]{tuljava}
   \caption{\small Skica karakteristike tuljave pri $\nu = 10\si{kHz}$}
 \end{slika}
 
@@ -142,7 +144,7 @@ Karakteristika teh elementov se ne spreminja s frekvenco.
 
 \begin{slika}[H]
   \centering
-  \includegraphics{LED}
+  \includegraphics[width=0.5\textwidth]{LED}
   \caption{\small Skica karakteristike LED diode pri $\nu = 50\si{Hz}$}
 \end{slika}
 
@@ -162,7 +164,7 @@ Pri Zenerjevi diodi pa imamo napetost:
 
 \begin{slika}[H]
   \centering
-  \includegraphics{dioda}
+  \includegraphics[width=0.5\textwidth]{dioda}
   \caption{\small Skica karakteristike Zenerjeve diode pri $\nu = 10\si{kHz}$}
 \end{slika}
 
@@ -197,7 +199,7 @@ in
 
 \begin{slika}[H]
   \centering
-  \includegraphics{baterija}
+  \includegraphics[width=0.5\textwidth]{baterija}
   \caption{\small Skica karakteristike baterije in akumulatorja pri $\nu = 50\si{Hz}$ AC napetosti.}
 \end{slika}
 
