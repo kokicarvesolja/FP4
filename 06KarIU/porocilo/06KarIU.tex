@@ -9,7 +9,7 @@
 \usepackage{ulem}
 \usepackage{graphicx}
 \usepackage{caption}
-\graphicspath{./skice/}
+\graphicspath{}
 \usepackage[document]{ragged2e}
 \usepackage{setspace}
 \usepackage{tabularx}
@@ -82,7 +82,7 @@ Pri vaji se spoznamo z uporabo funkcijskega generatorja in osciloskopa ter odziv
 
 Ima linearno karakteristiko v širokem razponu frekvenc. Tok in napetost sta v fazi in iz naklona se določi R. 
 
-\begin{slika}
+\begin{slika}[H]
   \centering
   \includegraphics{upornik}
   \caption{\small Skica karakteristike upornika pri $\nu = 50\si{Hz}$}
@@ -92,11 +92,11 @@ Ima linearno karakteristiko v širokem razponu frekvenc. Tok in napetost sta v f
   R = \frac{\Delta y}{\Delta x R_{not}} = \frac{3.7\si{V}}{3.75\si{V} \cdot 1k\omega} = (1010 \pm 30) \Omega
 \]
 
-\section*{kondenzator}
+\section*{Kondenzator}
 
 Preverite frekvenčni razpon, v katerem sta fazi toka in napetosti premaknjeni za $\frac{\pi}{2}$. Določite $C$ iz meritve toka in napetosti pri znani frekvenci. 
 
-\begin{slika}
+\begin{slika}[H]
   \centering
   \includegraphics{kondenzator}
   \caption{\small Skica karakteristike kondenzatorja pri $\nu = 50\si{Hz}$}
@@ -105,10 +105,101 @@ Preverite frekvenčni razpon, v katerem sta fazi toka in napetosti premaknjeni z
 Pri faznem zamiku $\frac{\pi}{2}$ velja: 
 
 \[
- C = \frac{\Delta y}{\Delta x R_{not} \omega} = \frac{1.25\si{V}}{3.5\si{V}\cdot 2\pi \cdot 50\si{Hz} \cdot 1k\omega}
+ C = \frac{\Delta y}{\Delta x R_{not} \omega} = \frac{1.25\si{V}}{3.5\si{V}\cdot 2\pi \cdot 50\si{Hz} \cdot 1k\omega} = (1.14 \pm 0.04)\mu \si{F}
+\]
+
+\section*{Tuljava z jedrom}
+
+Tuljava z jedrom je eden manj idealnih elementov, ker vsebuje dolge žice, ki prispevajo k upornosti in pri višjih frekvenca k parazitski kapacitivnosti ter magnetni odziv feritnega materiala je nelinearen in frekvenčno odvisen. 
+
+Pri faznem zamiku $\frac{\pi}{2}$
+
+\[
+  L = \frac{Z_L}{\omega} = \frac{\Delta x R}{\omega \Delta y} = \frac{3.8\si{V} \cdot 1k\Omega}{0.38\si{V} \cdot 2\pi \cdot 10^4\si{Hz}} = (160 \pm 5) mH 
+\]
+
+\begin{slika}[H]
+  \centering
+  \includegraphics{tuljava}
+  \caption{\small Skica karakteristike tuljave pri $\nu = 10\si{kHz}$}
+\end{slika}
+
+\section*{LED diode}
+
+Nelinearni elementi (diode, LED diode) imajo v karakteristiki kolena. 
+
+Napetosti za tok $|I| = 1\si{mA}$:
+
+\begin{align*}
+  U_{bela} &= (2.6 \pm 0.1)\si{V} \\
+  U_{IR} &= (1.15 \pm 0.05)\si{V} \\ 
+  U_{rdeca} &= (1.75 \pm 0.05)\si{V}
+\end{align*}
+
+Vidimo, da je barva LED diode povezana z napetostjo, kjer dioda začne prevajati. IR LED dioda, ki ima večjo valovno dolžino $\lambda$ potrebuje manjši tok, da začne prevajati. Rdeča dioda potrebuje malo večji tok in bela dioda še večjega.
+
+Karakteristika teh elementov se ne spreminja s frekvenco. 
+
+\begin{slika}[H]
+  \centering
+  \includegraphics{LED}
+  \caption{\small Skica karakteristike LED diode pri $\nu = 50\si{Hz}$}
+\end{slika}
+
+\section*{Dioda}
+
+Pri navadni diodi imamo napetost:
+
+\[
+  U = (0.5 \pm 0.02)\si{V}  
+\]
+
+Pri Zenerjevi diodi pa imamo napetost:
+
+\[
+  U_{Zener} = (-6.58 \pm 0.01)\si{V}  
+\]
+
+\begin{slika}[H]
+  \centering
+  \includegraphics{dioda}
+  \caption{\small Skica karakteristike Zenerjeve diode pri $\nu = 10\si{kHz}$}
+\end{slika}
+
+\section*{Baterija in akumulator}
+
+Te elementi imajo iz koordinatnega izhodišča izmaknjeno napetost, saj povzročajo napetost, ne da bi tok tekel skozi njih. V AC načinu lahko natančneje določimo njihovo notranjo upornost.
+
+Za baterijo pri $\nu = 50\si{Hz}$ AC napetosti: 
+
+\[
+  U = (8 \pm 0.5)\si{V}  
+\]
+
+in 
+
+\[
+  R_{int} = (1.5 \pm 0.2)\Omega  
+\]
+
+Za akumulator pri $\nu = 50 \si{Hz}$ AC napetosti: 
+
+\[
+  U = (1.3 \pm 0.05)\si{V}  
+\]
+
+in 
+
+\[
+  R_{int} = (1.8 \pm 0.4)\Omega  
 \]
 
 
+\begin{slika}[H]
+  \centering
+  \includegraphics{baterija}
+  \caption{\small Skica karakteristike baterije in akumulatorja pri $\nu = 50\si{Hz}$ AC napetosti.}
+\end{slika}
 
 
 \end{document}
