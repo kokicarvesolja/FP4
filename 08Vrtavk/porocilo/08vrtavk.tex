@@ -34,14 +34,13 @@
 \title{
   \includegraphics[width=0.4\textwidth]{fmf_logo}\\
   {\small Oddelek za fiziko} \\
-  {Naslov}\\
-  {\small Podnaslov}\\
+  {Vrtavka}\\
+  {\small Poročilo pri fizikalnem praktikumu IV}\\
 
 }
 \date{}
-\author{ avtor \\[5 cm]
- \small  Predavatelj:\\
- \small  Asistenta:  \\
+\author{ Kristofer Č. Povšič \\[5 cm]
+ \small Asistentka: Jelena Vesić \\
 }
 
 
@@ -57,31 +56,157 @@
 
 \chapter*{Uvod}
 
+Opisujemo gibanje vrtavke, kjer je njena kinetična energija mnogo večja od potencialne. Vrtavka ima dolgo os poravnano z $z$-osjo, je nutacijska frekvenca podana z 
+
+\begin{equation}
+  \nu_{nu} = \frac{J_{33}}{J_{11}}\nu_z
+\end{equation}
+
+kjer ima vektor vztrajnostnega momenta komponente $\vec{J} = (J_{11}, J_{22}, J_{33})$ ter je $\nu_z$ frekvenca kroženja. Precesijska frekvenca je podana z
+
+\begin{equation}
+  \nu_{pr} = \frac{1}{4\pi^2}\frac{mgh^*}{J_{33}\nu_z}
+\end{equation}
+
+kjer je $m$ masa vrtavke, $g$ težnostni pospešek, $h^*$ pa razdalja med težiščem in oporno točko osi ($h^*$ je ročica navora). 
+
 \chapter*{Naloga}
 
+Izmeri precesijsko ($\omega_{pr}$) in nutacijsko kotno hitrost ($\omega_{nu}$) v odvisnosti od kotne hitrosti ($\omega_z$) vrtavke. Izvedi meritev pri vsaj treh frekvencah $\nu_z = \frac{\omega_z}{2\pi}$. Na primer pri približno 600, 500, 400 obratih na minuto (kratica rpm - angl. rotations per minute). Gornjo meritev izvedi pri naslednjih nastavitvah vrtavke: 
+\begin{itemize}
+  \item vrtavka z utežjo blizu krogle
+  \item utež na sredini palice 
+  \item utež na koncu palice (pusti si prostor za oprijem)
+\end{itemize}
+Meritve z različnimi nastavitvami vrtavke izvedi pri podobnih frekvencah $\nu_z$ kot prej, da so rezultati lažje primerljivi. Izmerjene vrednosti $\omega_{pr}$ in $\omega_{nu}$ primerjaj z izračunanimi in naredi tabelo. 
 
 \begingroup
 \let\clearpage\relax
 
 \chapter*{Potrebščine}
 \begin{itemize}
-\item 
+\item krogla s podnožjem in priborom (palica, utež in ploščica z vzorcem)
+\item kompresor pod mizo 
+\item stroboskop
+\item štoparica 
 \end{itemize}
 
+
 \chapter*{Navodilo}
+
+Sestavim vajo po navodilih. Vrtavka je sestavljen aiz kovinske krogle, aluminijaste palice s snemljivivo in premakljivo utežjo. Na palici je fiksno pritrjena ploščica z močno kontrastnim vzorcem. Pod stroboskopom lahko s pomočjo vzorca določim frekvenco rotacije okoli lastne osi vrtavke $\nu_z$. 
+
+Vključim kompresor in ventilator. S prsti zavrtim vrtavko v navpičnem položaju in pustim, da jo zračni curek dodatni zavrti. Spreminjam frekvenco na stroboskopu in ko se vzorec na vrtavki ustali, odčitam izmerjeno vrednost vrtenja. Prislonim svinčnik in s tem izmaknem vrtavko iz osi in vrtavka začne s precesijo. Izmerim precesijski čas pod različinimi koti, da vidim, da je neodvisen od kota. 
+
+S kratkim udarcem po vrtavki, začnem nutacijo. Potrebno jo je večkrat vzbuditi, saj jo trenje zavira. 
+
+Znani podatki o vrtavki so: 
+
+\begin{equation*}
+  m_s = \SI{515}{g} \qquad 2r_s = \SI{50.8}{mm},
+\end{equation*}
+
+in
+
+\begin{align*}
+  m_r &= \SI{15}{g} \qquad 2r_r = \SI{51}{g} \qquad h_r = \SI{1.1}{mm} \\
+  m_b &= \SI{27}{g} \qquad 2r_b = \SI{6.5}{g} \qquad h_b = \SI{100.5}{mm} \\
+  m_w &= \SI{18}{g} \qquad 2r_1 = \SI{20}{g} \qquad h_w = \SI{25.2}{mm},
+\end{align*}
 
 \endgroup
 
 
 \chapter*{Obdelava podatkov}
 
+\section*{Utež na $h^*=0$}
 
+Izmerjeni podatki so: 
 
-\chapter*{Izračunane vrednosti}
+\begin{tabela}[H]
+  \centering
+  \[
+  \begin{array}{|cc|cc|c|}\hline
+    (\nu_z \pm 50) [\si{rpm}] & (\nu_z \pm 0.8) [\si{Hz}] & 5t_{pr} [\si{s}] & \nu_{pr} [\si{Hz}] & \nu_{nu} [\si{Hz}] \\ \hline 
+    350 & 5.8 & 15.8 & 0.3 \pm 0.1 & 3.7 \pm 0.1 \\
+    510 & 8.5 & 15.7 & 0.3 \pm 0.1 & 4.6 \pm 0.1 \\
+    600 & 10 & 18.0 & 0.2 \pm 0.1 & 8.4 \pm 0.1 \\ \hline 
+  \end{array}
+  \]
+\end{tabela}
 
+Izračunani podatki so: 
 
-\chapter*{Komentar}
+\begin{tabela}[H]
+  \centering
+  \[
+  \begin{array}{|c c|c c|c c|}\hline 
+    \nu_z [\si{rpm}] & \pm [\si{rpm}] & \nu_{pr} [\si{Hz}] & \pm [\si{Hz}] & \nu_{nu} [\si{Hz}] & \pm [\si{Hz}] \\\hline
+    350.00 &   50.00 &    0.79 &    0.12 &    2.86 &    0.41\\
+    510.00 &   50.00 &    0.55 &    0.06 &    4.17 &    0.41\\
+    600.00 &   50.00 &    0.46 &    0.04 &    4.90 &    0.41 \\ \hline 
+  \end{array}
+  \]
+\end{tabela}
 
+\section*{Utež na $h^*=(3.5 \pm 0.1) \si{cm}$}
 
+Izmerjeni podatki so: 
+
+\begin{tabela}[H]
+  \centering
+  \[
+  \begin{array}{|c c|c c| c|}\hline
+    (\nu_z \pm 50) [\si{rpm}] & (\nu_z \pm 0.8) [\si{Hz}] & 5t_{pr} [\si{s}] & \nu_{pr} [\si{Hz}] & \nu_{nu} [\si{Hz}] \\ \hline 
+    360 & 6 & 9.0 & 0.5 \pm 0.1 & 2.3 \pm 0.1 \\
+    510 & 8.5 & 9.6 & 0.5 \pm 0.1 & 3.1 \pm 0.1 \\
+    580 & 9.7 & 11.2 & 0.4 \pm 0.1 & 3.6 \pm 0.1 \\ \hline 
+  \end{array}
+  \]
+\end{tabela}
+
+Izračunani podatki so: 
+
+\begin{tabela}[H]
+  \centering
+  \[
+  \begin{array}{|c c|c c|c c|}\hline
+    \nu_z [\si{rpm}] & \pm [\si{rpm}] & \nu_{pr} [\si{Hz}] & \pm [\si{Hz}] & \nu_{nu} [\si{Hz}] & \pm [\si{Hz}] \\\hline
+    360.00 &   50.00 &    0.91 &    0.13 &    2.60 &    0.35\\
+    510.00 &   50.00 &    0.66 &    0.07 &    3.58 &    0.35\\
+    580.00 &   50.00 &    0.58 &    0.05 &    4.07 &    0.36\\ \hline 
+  \end{array}
+  \]
+\end{tabela}
+
+\section*{Utež na $h^*=(6.5 \pm 0.1) \si{cm}$}
+
+Izmerjeni podatki so: 
+
+\begin{tabela}[H]
+  \centering
+  \[
+  \begin{array}{|c c|c c| c|}\hline
+    (\nu_z \pm 50) [\si{rpm}] & (\nu_z \pm 0.8) [\si{Hz}] & 5t_{pr} [\si{s}] & \nu_{pr} [\si{Hz}] & \nu_{nu} [\si{Hz}] \\ \hline 
+    300 & 5 & 3.23 & 1.5 \pm 0.1 & 1.8 \pm 0.1 \\
+    410 & 6.8 & 6.8 & 0.7 \pm 0.1 &  3.6\pm 0.1 \\
+    510 & 8.5 & 11.3 & 0.4 \pm 0.1 & 4.7 \pm 0.1 \\ \hline 
+  \end{array}
+  \]
+\end{tabela}
+
+Izračunani podatki so: 
+
+\begin{tabela}[H]
+  \centering
+  \[
+  \begin{array}{|c c|c c|c c|}\hline 
+    \nu_z [\si{rpm}] & \pm [\si{rpm}] & \nu_{pr} [\si{Hz}] & \pm [\si{Hz}] & \nu_{nu} [\si{Hz}] & \pm [\si{Hz}] \\\hline
+    300.00 &   50.00 &    1.29 &    0.22 &    1.74 &    0.29\\
+    410.00 &   50.00 &    0.94 &    0.12 &    2.38 &    0.29\\
+    510.00 &   50.00 &    0.76 &    0.08 &    2.96 &    0.30\\ \hline 
+  \end{array}
+  \]
+\end{tabela}
 
 \end{document}
